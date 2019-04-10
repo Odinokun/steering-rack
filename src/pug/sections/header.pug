@@ -1,0 +1,23 @@
+//.container-lg.container-lg--top(style="padding-top:85px")
+// begin header
+header#header.header
+  .container-lg
+    // begin header-logo
+    h1.header-logo
+      a(href="#") Рулевые рейки
+    // end header-logo
+
+    include ../elements/header-menu
+
+    // begin header-contacts
+    div.header-contacts
+      a.header-contacts__phone(href="tel:+88005555535")
+        +svg('phone')
+        span 8 (800) 555-55-35
+      a.header-contacts__adress(href="https://goo.gl/maps/LcC4fNeiTpm" target="_blank" rel="nofollow noopener noreferrer")
+        +svg('marker')
+        span ул. Ленина, д.14
+    // end header-contacts
+
+    include ../elements/burger
+// end header

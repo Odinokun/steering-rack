@@ -1,0 +1,136 @@
+.header {
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.0);
+  transition: .5s;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    transition: opacity .5s;
+    opacity: 0;
+    background-color: #fff;
+  }
+  &.active {
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.08);
+    &::before {
+      opacity: 1;
+    }
+  }
+  .container-lg {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include max(600) {
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+}
+
+.header-logo {
+  font-size: 18px;
+  max-width: 85px;
+  margin-right: 45px;
+  margin-bottom: 0;
+
+  @include max(900) {
+    margin-right: 20px;
+  }
+  a {
+    font-family: $font-os-bold;
+    font-size: 18px;
+    transition: color .5s;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $title;
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
+
+.header-contacts {
+  flex: none;
+  margin-left: auto;
+
+  @include max(600) {
+    margin-left: 0;
+  }
+  @include max(390) {
+    display: flex;
+  }
+}
+
+.header-contacts__phone {
+  font-family: $font-bold;
+  font-size: 22px;
+  line-height: 1;
+  transition: color .5s;
+  text-decoration: none;
+  color: $title;
+  &:hover {
+    color: $highlight;
+  }
+  svg {
+    display: none;
+    flex: none;
+    fill: $highlight;
+    width: 14px;
+    height: 18px;
+    margin-right: 8px;
+
+    @include max(390) {
+      display: block;
+      width: 30px;
+      height: 45px;
+      margin: 0 10px;
+    }
+  }
+  span {
+    display: block;
+    margin-bottom: 7px;
+
+    @include max(390) {
+      display: none;
+    }
+  }
+}
+
+.header-contacts__adress {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: color .5s;
+  text-decoration: none;
+  color: $title;
+  &:hover {
+    color: $highlight;
+  }
+  svg {
+    flex: none;
+    fill: $highlight;
+    width: 14px;
+    height: 18px;
+    margin-right: 8px;
+
+    @include max(390) {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+    }
+  }
+  span {
+    @include max(390) {
+      display: none;
+    }
+  }
+}
