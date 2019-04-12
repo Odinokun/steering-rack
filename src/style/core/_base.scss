@@ -33,6 +33,7 @@ h1 {
   font-family: $font-bold;
   font-size: 42px;
   color: $title;
+  line-height: 1.1;
 }
 h2 {
   font-family: $font-bold;
@@ -129,7 +130,6 @@ svg {
   // text-shadow: none;
 }
 
-
 .main-wrap {
   display: flex;
   flex-direction: column;
@@ -141,6 +141,35 @@ svg {
 }
 .main {
   flex-grow: 1;
+}
+.main--inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 85px;
+
+  &::before,
+  &::after {
+    content: '';
+    background-size: contain;
+    left: 0;
+    position: absolute;
+    max-width: 100%;
+  }
+  &::before {
+    top: 0;
+    width: 560px;
+    height: 290px;
+    background-image: url('../img/bg-top.png');
+  }
+  &::after {
+    bottom: 0;
+    width: 650px;
+    height: 507px;
+    background-image: url('../img/bg-bottom.png');
+  }
 }
 
 .container-lg {
@@ -158,6 +187,7 @@ svg {
 
 .container {
   position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 860px;
   margin: 0 auto;

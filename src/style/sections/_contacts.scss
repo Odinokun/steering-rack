@@ -1,0 +1,124 @@
+.contacts-sec__title {
+  font-family: $font;
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2580a2;
+}
+
+.contacts-sec__body {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include max(740) {
+    flex-direction: column;
+    width: 260px;
+    margin: 0 auto;
+  }
+  @include max(425) {
+    width: 100%;
+  }
+}
+
+.contacts-sec__item {
+  margin-bottom: 25px;
+
+  @include max(740) {
+    margin-bottom: 30px;
+  }
+}
+
+.contacts-sec__item--left {
+  display: flex;
+  .contacts-sec__item-text {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #000;
+  }
+}
+
+.contacts-sec__item-logo {
+  font-family: $font-bold;
+  font-size: 18px;
+  line-height: 1;
+  max-width: 85px;
+  margin-right: 20px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #3a3a3a;
+}
+
+.contacts-sec__item--middle {
+  display: flex;
+  padding: 0 15px;
+
+  @include max(740) {
+    padding: 0;
+  }
+  svg {
+    flex: none;
+    width: 29px;
+    height: 38px;
+  }
+  .contacts-sec__item-text {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-size: 22px;
+      line-height: 1;
+      margin-bottom: 15px;
+      color: #2580a2;
+    }
+    a {
+      font-family: $font-semibold;
+      font-size: 16px;
+      transition: color .5s;
+      text-decoration: none;
+      color: #363636;
+      &:hover {
+        color: $highlight;
+      }
+    }
+  }
+}
+
+.contacts-sec__item-icon {
+  flex: none;
+  margin-right: 15px;
+  svg {
+    fill: #063546;
+  }
+}
+
+.contacts-sec__item--right {
+  display: flex;
+  svg {
+    flex: none;
+    width: 37px;
+    height: 37px;
+  }
+
+  .contacts-sec__item-text {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-size: 22px;
+      line-height: 1;
+      margin-bottom: 15px;
+      color: #2580a2;
+    }
+    a {
+      font-family: $font-semibold;
+      font-size: 20px;
+      transition: color .5s;
+      text-decoration: none;
+      color: #363636;
+      &:hover {
+        color: $highlight;
+      }
+    }
+  }
+}

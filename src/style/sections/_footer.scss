@@ -1,0 +1,14 @@
+.footer {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    max-width: 100%;
+    left: -300px;
+    top: -400px;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-color: #f3f5f8;
+  }
+}

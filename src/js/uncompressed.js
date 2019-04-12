@@ -29,3 +29,29 @@ function pageWidget(pages) {
 
 
 //====== Begin Programmer code ======
+
+// begin popup open
+$('.popup-open').on('click', function() {
+  $('.popup, .popup__layer').fadeIn();
+});
+// end popup open
+
+// begin popup close
+$('.popup__close, .popup-success__btn').on('click', function() {
+  $('.popup, .popup-success, .popup__layer').fadeOut();
+});
+// end popup close
+
+// begin popup send
+$('.popup__btn').on('click', function() {
+  event.preventDefault();
+  $('.popup').fadeOut();
+  $('.popup-success').fadeIn();
+
+  function closePopup() {
+    $('.popup-success, .popup__layer').fadeOut();
+  }
+
+  setTimeout(closePopup, 2000);
+});
+// end popup send

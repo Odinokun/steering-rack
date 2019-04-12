@@ -7,14 +7,18 @@
 //elements
 @import 'elements/header-menu';
  @import 'elements/burger';
-// @import 'elements/breadcrumbs';
+ @import 'elements/breadcrumbs';
 // @import 'elements/pagination';
-// @import 'elements/popup';
-// @import 'elements/slickBase';
+ @import 'elements/popup';
+ @import 'elements/slickBase';
 
 //section
 @import 'sections/footer';
 @import 'sections/header';
+@import 'sections/contacts';
+@import 'sections/slider-2';
+@import 'sections/slider-3';
 
 //pages
 @import 'pages/index';
+@import 'pages/inner';
