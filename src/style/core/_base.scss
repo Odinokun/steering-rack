@@ -32,8 +32,8 @@ h6 {
 h1 {
   font-family: $font-bold;
   font-size: 42px;
-  color: $title;
   line-height: 1.1;
+  color: $title;
 }
 h2 {
   font-family: $font-bold;
@@ -140,7 +140,16 @@ svg {
   }
 }
 .main {
+  padding-top: 85px;
+
   flex-grow: 1;
+@include max(900) {
+    padding-top: 120px;
+  }
+
+@include max(600) {
+    padding-top: 85px;
+  }
 }
 .main--inner {
   position: relative;
@@ -148,15 +157,14 @@ svg {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding-top: 85px;
 
   &::before,
   &::after {
+    position: absolute;
+    left: 0;
+    max-width: 100%;
     content: '';
     background-size: contain;
-    left: 0;
-    position: absolute;
-    max-width: 100%;
   }
   &::before {
     top: 0;
@@ -179,7 +187,7 @@ svg {
   margin: 0 auto;
   padding: 10px;
 
-  @include max(860) {
+@include max(860) {
     max-width: 860px;
     padding: 10px 20px;
   }
@@ -192,6 +200,42 @@ svg {
   max-width: 860px;
   margin: 0 auto;
   padding: 10px 20px;
+}
+
+.title-section {
+  font-family: $font;
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2580a2;
+}
+
+.title-section--half-section {
+  margin-bottom: 5px;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #e0e7f1;
+  }
+  &::before {
+    bottom: 13px;
+    right: -70px;
+    width: 50px;
+    height: 2px;
+  }
+  &::after {
+    bottom: 7px;
+    right: -100px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+  }
 }
 
 .banner {
