@@ -2,13 +2,42 @@ module.exports = function() {
 
   // begin Slick slider
 
-  $('.slick').slick({
-    dots: true,
+  $('.slider-2__list').slick({
+    dots: false,
     infinite: true,
+    autoplay: true,
     speed: 500,
     fade: true,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 426,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
+  });
+
+  $('.slider-3__list').slick({
+    infinite: true,
     autoplay: true,
-    cssEase: 'linear'
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 741,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 426,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
   // end Slick slider

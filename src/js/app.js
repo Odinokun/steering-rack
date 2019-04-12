@@ -13,10 +13,7 @@ $(function() {
   require('./modules/bg-menu')();
 
   // begin Slick slider
-  // require('./modules/slick')();
-
-  // begin Popup
-  // require('./modules/popup')();
+  require('./modules/slick')();
 
   // begin Animate.css
   // require('./modules/waypoints')();
