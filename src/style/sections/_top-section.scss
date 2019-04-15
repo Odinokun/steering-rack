@@ -1,0 +1,234 @@
+.top-section {
+  min-height: 880px;
+  padding-top: 85px;
+  background-image: url('../img/bg-top-index.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @include max(900) {
+    padding-top: 120px;
+  }
+  @include max(600) {
+    padding-top: 85px;
+  }
+}
+
+.top-section__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 550px;
+  background-image: url('../img/top-pic.png');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: contain;
+
+  @include max(970) {
+    text-align: center;
+    background-image: none;
+  }
+  @include max(600) {
+    min-height: 350px;
+  }
+}
+
+.top-section__slogan {
+  padding-left: 30px;
+
+  @include max(970) {
+    padding-left: 0;
+  }
+  span {
+    line-height: 1.3;
+    display: block;
+    letter-spacing: 2px;
+    color: #063546;
+  }
+}
+.top-section__slogan--regular {
+  font-family: $font;
+  font-size: 36px;
+
+  @include max(600) {
+    font-size: 26px;
+  }
+}
+.top-section__slogan--bold {
+  font-family: $font-bold;
+  font-size: 38px;
+
+  @include max(600) {
+    font-size: 26px;
+  }
+}
+.top-section__slogan--large {
+  font-family: $font-bold;
+  font-size: 42px;
+  margin-top: 20px;
+
+  @include max(600) {
+    font-size: 32px;
+  }
+}
+.top-section__btn {
+  font-family: $font-bold;
+  display: flex;
+  align-items: center;
+  width: 281px;
+  height: 38px;
+  margin: 40px 0 40px 130px;
+  padding-right: 5px;
+  padding-left: 30px;
+  transition: background-color .5s;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 18px;
+  background-color: #c11935;
+
+  @include max(970) {
+    margin: 40px auto;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #d11d1c;
+  }
+}
+.top-section__btn-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  border-radius: 50%;
+  background-color: #fff;
+  svg {
+    flex: none;
+    fill: $highlight;
+    width: 10px;
+    height: 15px;
+  }
+}
+
+.services {
+  margin-bottom: 50px;
+  .container-lg {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 90px;
+    padding-left: 90px;
+
+    @include max(970) {
+      max-width: 800px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    @include max(600) {
+      max-width: 500px;
+    }
+  }
+}
+
+.services__item {
+  font-family: $font-semibold;
+  font-size: 16px;
+  line-height: 1.2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 140px;
+  margin-bottom: 30px;
+  padding: 0 10px;
+  transition: .5s;
+  text-align: center;
+  text-decoration: none;
+  color: #063546;
+
+  @include max(970) {
+    &::before {
+      display: none;
+    }
+  }
+  @include max(600) {
+    width: 45%;
+    max-width: 45%;
+  }
+  &:last-child {
+    &::before {
+      display: none;
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 59px;
+    right: -60px;
+    width: 50px;
+    height: 2px;
+    content: '';
+    background-color: #e0e7f1;
+  }
+  &::after {
+    position: absolute;
+    top: -8px;
+    right: -0;
+    width: 90px;
+    height: 90px;
+    content: '';
+    background-image: url('../img/bg-services-pic.png');
+
+    @include max(600) {
+      display: none;
+    }
+  }
+  &:hover {
+    color: $highlight;
+    .services__pic {
+      border: 1px solid $highlight;
+      box-shadow: 0 0 38px rgba(209, 50, 76, .14);
+    }
+  }
+}
+
+.services__decor {
+  position: absolute;
+  top: 64px;
+  width: 79px;
+  height: 14px;
+
+  @include max(970) {
+    display: none;
+  }
+  svg {
+    fill: #e0e7f1;
+    width: 100%;
+    height: 100%;
+  }
+}
+.services__decor--left {
+  left: 5px;
+}
+.services__decor--right {
+  right: 5px;
+}
+
+.services__pic {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+  transition: .5s;
+  border: 1px solid #3186a6;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 38px rgba(37, 128, 162, .14);
+  img {
+    display: block;
+    width: 100%;
+  }
+}

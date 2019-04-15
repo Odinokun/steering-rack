@@ -1,0 +1,43 @@
+//begin top-section
+section.top-section
+  .container-lg.top-section__container
+    .top-section__slogan
+      span.top-section__slogan--regular
+        |Ремонт рулевых реек и
+        br
+        |рулевых механизмов
+      span.top-section__slogan--bold любой сложности
+      span.top-section__slogan--large ГАРАНТИЯ - 2 года!
+    a(href="#").top-section__btn.popup-open
+      span.top-section__btn-text Рассчитать стоимость
+      span.top-section__btn-svg
+        +svg('arrow')
+  section
+    .container
+      h2.title-section Услуги
+
+  //begin services
+  section.services
+    .container-lg
+      .services__decor.services__decor--left
+        +svg('decor-left')
+      a(href="#").services__item
+        .services__pic
+          img(src="assets/img/services-01.jpg" alt="pic")
+        span.services__text Текст услуги номер один
+      a(href="#").services__item
+        .services__pic
+          img(src="assets/img/services-02.jpg" alt="pic")
+        span.services__text Текст услуги номер два
+      a(href="#").services__item
+        .services__pic
+          img(src="assets/img/services-03.jpg" alt="pic")
+        span.services__text Текст услуги номер три
+      a(href="#").services__item
+        .services__pic
+          img(src="assets/img/services-04.jpg" alt="pic")
+        span.services__text Текст услуги номер четыре
+      .services__decor.services__decor--right
+        +svg('decor-right')
+  //end   services
+//end   top-section
