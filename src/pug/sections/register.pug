@@ -13,7 +13,7 @@ section.register
 
     form.register__form
       input.register__input(name='name' placeholder='Имя')
-      input.register__input(name='phone' placeholder='+7 (...) ...-..-..')
+      input.register__input.phone-mask(name='phone' placeholder='+7 (...) ...-..-..')
       input.register__submit(type='submit' value='Записаться')
     .register__pic
       img(src="assets/img/register.jpg" alt="img")

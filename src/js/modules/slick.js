@@ -8,15 +8,7 @@ module.exports = function() {
     autoplay: true,
     speed: 500,
     fade: true,
-    cssEase: 'linear',
-    responsive: [
-      {
-        breakpoint: 426,
-        settings: {
-          arrows: false
-        }
-      }
-    ]
+    cssEase: 'linear'
   });
 
   $('.slider-3__list').slick({

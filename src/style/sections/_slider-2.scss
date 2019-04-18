@@ -2,6 +2,20 @@
   position: relative;
   z-index: 1;
   margin-top: -20px;
+  @include max(425) {
+    margin-bottom: 40px;
+    .slick-prev,
+    .slick-next {
+      //top: 100%;
+      top: calc(100% - 20px);
+    }
+    .slick-prev {
+      left: calc(50% - 60px);
+    }
+    .slick-next{
+      right: calc(50% - 60px);
+    }
+  }
 }
 .slider-2__list {
   margin: 0;
